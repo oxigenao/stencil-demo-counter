@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/almjscounter.esm.js"></script>
+  <script nomodule src="/build/almjscounter.js"></script>
+  <link rel="stylesheet" href="/build/almjscounter.css">
+
+  <style>
+    :root {
+      --default-background: coral;
+    }
+
+    body {
+      padding: 20px
+    }
+
+    ajs-counter {
+      --button-border-radius: 8px;
+    }
+
+    h3 {
+      color: yellow;
+    }
+
+    /* .aljs-counter-class {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    } */
+  </style>
+</head>
+
+<body>
+  <ajs-counter id="myCounter">
+    🚀
+  </ajs-counter>
+
+
+  <script>
+    var myCounter = document.getElementById('myCounter');
+    myCounter.addEventListener('counterValueChange', ev => {
+      console.log("Valor contador", ev.detail)
+    })
+
+  </script>
+
+</body>
+
+</html>
